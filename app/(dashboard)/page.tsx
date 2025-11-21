@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface Link {
   code: string;
@@ -163,7 +164,7 @@ export default function Dashboard() {
               filteredLinks.map((link) => (
                 <tr key={link.code} className="hover:bg-gray-50">
                   <td className="border border-gray-300 p-2 font-mono text-blue-600">
-                    {link.code}
+                    <Link href={`/code/${link.code}`}>{link.code}</Link>
                   </td>
                   <td className="border border-gray-300 p-2 break-all">
                     {link.url.length > 32

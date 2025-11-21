@@ -20,9 +20,8 @@ export async function GET(
 
   return NextResponse.json(
     {
-      actualURL: link.url,
+      link,
       customURL: `${process.env.NEXT_PUBLIC_BASE_URL}/${customCode}`,
-      clicks: link.clicks,
     },
     { status: 200 }
   );
