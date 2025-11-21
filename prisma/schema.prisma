@@ -12,3 +12,11 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Link {
+  code String @id
+  url  String
+  clicks Int  @default(0)
+  createdAt DateTime @default(now())
+  lastClickedAt DateTime?
+}
