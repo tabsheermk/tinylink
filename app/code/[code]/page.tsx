@@ -13,7 +13,7 @@ export default async function LinkDetailsPage({
 }: {
   params: Promise<{ code: string }>;
 }) {
-  const { code } = await params; // await params here
+  const { code } = await params;
 
   if (!code) {
     notFound();
