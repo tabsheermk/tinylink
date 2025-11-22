@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server";
-
 export default function HealthzPage() {
   const data = { ok: true, version: "1.0" };
 

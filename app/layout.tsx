@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "TinyLink",
@@ -34,9 +23,9 @@ export default function RootLayout({
               <Link href="/" className="hover:text-blue-700 transition">
                 Dashboard
               </Link>
-              <a href="/healthz" className="hover:text-blue-700 transition">
+              <Link href="/healthz" className="hover:text-blue-700 transition">
                 Health Check
-              </a>
+              </Link>
             </nav>
           </div>
         </header>
